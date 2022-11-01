@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+      if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+      function mischandler(){
+      return false;
+      }
+      function mousehandler(e){
+      var myevent = (isNS) ? e : event;
+      var eventbutton = (isNS) ? myevent.which : myevent.button;
+      if((eventbutton==2)||(eventbutton==3)) return false;
+      }
+      document.oncontextmenu = mischandler;
+      document.onmousedown = mousehandler;
+      document.onmouseup = mousehandler;
+      </script>
+  </head>
+<body>
+<img src="LOGO.png">
+<br><br><br>
+  <H3>Murga Murgi</H3>
+<audio controls autoplay>
+  <source src="Murga_Murgi.mp3" type="audio/mpeg">
+</audio>
+<br><br><br>
+<H3>Teri Choodiyon Ki</H3>
+<audio controls autoplay>
+  <source src="Teri_Choodiyon_Ki.mp3" type="audio/mpeg">
+</audio>
+<br><br><br>
+<H3>Teri Gand Me Danda De</H3>
+<audio controls autoplay>
+  <source src="Teri_Gand_Me_Danda_De.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
